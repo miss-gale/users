@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>Users</title>
+          <link rel="stylesheet" type="text/css" href="Users.css">
+          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script type="text/javascript">
+
+          $(document).ready(function(){
+               $('#submit').click(function(){
+                    $('table').append('<tr><td>'+ $('input[name="firstName"]').val() + '</td><td>'
+                         + $('input[name="lastName"]').val() + '</td><td>'
+                         + $('input[name="emailAddress"]').val() + '</td><td>'
+                         + $('input[name="contactNumber"]').val() + '</td></tr>');
+                    return false;
+               });
+          });
+
+          </script>
+     </head>
+     <body>
+          <h1>jQuery Assignment: Users</h1>
+          <p>Create a blank table which has First Name, Last Name, Email and Contact Number as table headings. Have a form at the bottom which will be used to append items to the table. Make sure that each form field appends to its proper row/column in the table.</p>
+
+          <hr></hr>
+          <h2>Here is a list of users:</h2>
+          <table>
+               <thead>
+                    <tr>
+                         <th>First Name</th>
+                         <th>Last Name</th>
+                         <th>Email Address</th>
+                         <th>Contact #</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr>
+                         <td>Lindsay</td>
+                         <td>Gale</td>
+                         <td>linzGale@fakegmail.com</td>
+                         <td>206-333-4444</td>
+                    </tr>
+               </tbody>
+          </table>
+
+          <hr></hr>
+          <h2>Add User</h2>
+          <form class="newUserForm">
+               <p>Enter the requested information to add a new user:</p>
+               <label>First Name:</label>
+               <input type="text" name="firstName" placeholder="First Name...">
+               <label>Last Name:</label>
+               <input type="text" name="lastName" placeholder="Last Name...">
+               <label>Email Address:</label>
+               <input type="text" name="emailAddress" placeholder="Email Address...">
+               <label>Contact #:</label>
+               <input type="text" name="contactNumber" placeholder="Contact Number...">
+               <input id="submit" type="submit" value="Click to submit a new user!">
+          </form>
+
+     </body>
+</html>
